@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   resources :media_contents, only: [:create]
 
   root 'media_contents#index'
+
+  delete 'delete_media', to: "media_contents#delete_media"
+  delete 'delete_all', to: 'media_contents#delete_all'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
